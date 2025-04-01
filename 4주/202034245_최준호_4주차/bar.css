@@ -1,0 +1,29 @@
+a:link{
+    color: #2d942d;
+    text-decoration: none;
+    
+}
+a:visited  {
+    color:#2d942d;
+    text-decoration: none;
+    
+}
+a:hover{
+    color: #b4b843;
+}
+a:active
+{
+    color: blue;
+}
+tr, td{
+    padding: 10px;
+
+}
+table{
+    border-top: solid 1px; 
+    border-bottom: solid 1px;
+    border-color: #2d942d;
+}
+body{
+    background-color: #e6dbc56d;
+}

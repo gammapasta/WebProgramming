@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio 태그</title>
+</head>
+<body>
+    <audio src="../audio/One_More_Last_Time.flac" type="audio/flac" autoplay controls loop></audio><br>
+    
+    <!--지원 가능한 거 있으면 작동 하게 만들기-->
+    <audio autoplay controls>
+      <source src="../audio/One_More_Last_Time.flac" type="audio/flac">
+      <source src="../audio/One_More_Last_Time.mp3" type="audio/mp3">  
+      지원하지않음
+    </audio><br>
+    
+
+
+    <video src="../video/video1.mp4" type="video/mp4" autoplay controls loop width="800"></video><br>
+
+    <!--지원 가능한 거 있으면 작동 하게 만들기-->
+    <video width="800" controls autoplay>
+        <source src="../video/video1.mp4" type="video/mp4">
+        <source src="../video/video1.webm" type="video/webm">
+        <source src="../video/video1.ogg" type="video/ogg">
+        지원하지 않는 브라우저입니다.
+    </video>
+
+
+</body>
+</html>
