@@ -1,0 +1,26 @@
+#menu{
+    text-align: center;
+}
+#menu li{
+    display: inline;
+    font-size: 16px;
+    padding-right: 15px;
+}
+
+#menu li a:link{
+    color: #2d942d;
+    text-decoration: none;
+    
+}
+#menu li a:visited  {
+    color:#2d942d;
+    text-decoration: none;
+    
+}
+#menu li a:hover{
+    color: #469ef1;
+}
+#menu li a:active
+{
+    color: blue;
+}
