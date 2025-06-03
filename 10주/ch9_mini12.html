@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        *{ /* 초기화 시킴 */
+            margin: 0;
+            padding: 0;  
+        }
+        body{
+            font-family: '돋움';
+            font-size: 12px;
+
+        }
+        ul{
+            list-style: none; /* 리스트 스타일 없애기 */
+        }
+        #login_title{
+            width: 585px;
+            padding: 10px;
+            margin: 50px;
+            font-size: 20px;
+            border: solid 5px #e6e2d7;
+        }
+        #login_box{
+            width: 610px;
+            height: 283px;
+            margin: 20px 0 0 50px;
+            border: solid 2px #cccccc;
+            border-radius: 20px;
+            
+        }
+        #login_message{
+            margin:20px 0 0 50px;
+        }
+        #left{
+            display: inline-block;
+            margin-left: 60px;
+            margin-top: 5px;
+        }
+        #right{
+            display: inline-block;
+            margin-left: 70px;
+        }
+        #id_pw, #login_button{
+            display: inline-block;
+            vertical-align: top;
+        }
+        #id_pw span{
+            display: inline-block;
+            width: 50px;
+        }
+        #id_pw input{
+            width: 130px;
+            height: 20px;
+        }
+        #password{
+            margin-top: 30px;
+        }
+        #auto_login{
+            margin: 15px 0 0 25px;
+        }
+        #join_find{
+            margin: 25px 0 0 25px;
+        }
+        #join_find li{
+            padding: 2px;
+            list-style-type: disc;
+
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h2 id="login_title">로그인</h2>
+
+    <div id="login_box">
+        <img src="./img/로그인글자.png" id="login_message">
+        <ul>
+            <li id="left">
+                <img src="./img/lock.jpg">
+            </li>
+            <li id="right">
+                <ul id="input_button">
+                    <li id="id_pw">
+                        <ul>
+                            <li>
+                                <span>아이디</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span>비밀번호</span>
+                                <input type="password">
+                            </li>
+                        </ul>
+                    </li>
+                    <li id ="login_button">
+                        <img src="./img/로그인아이콘.png">
+                    </li>
+                </ul>
+                <div id="auto_login">
+                    <input type="checkbox"> 자동 로그인
+                </div>
+                <ul id="join_find">
+                    <li>아직 회원이 아니세요?</li>
+                    <li>아이디 또는 비밀번호를 잊으셨나요?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

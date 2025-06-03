@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./menu.css">
+    <title>Document</title>
+    <style>
+        *{
+                margin: 0;
+                padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+        body{
+            font-family: "맑은고딕";
+            font-size: 12px;
+            color: #444444;
+        }
+
+        #login_box{
+            width: 220px;
+            height: 120px;
+            border: solid 1px #bbbbbb;
+            border-radius: 15px;
+            margin: 10px 0 0 10px;
+            padding: 10px 0 0 15px;
+        }
+
+        #login_box input{
+            width: 100px;
+            height: 20px;
+        }
+
+        #id_pw_input, #login_button{
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #id_pw_input span{
+            display: inline-block;
+            width: 20px;
+        }
+
+        #password{
+            margin-top: 2px;
+        }
+
+        #login_button button{
+            margin-left: 5px;
+            padding: 12px;
+            border-radius: 5px;
+        }
+        
+        #etc_list{
+            margin-top: 10px;
+            
+        }
+        #etc_list li{
+            margin-left: 5px;
+            display: inline-block;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="./index.html">홈</a></li>
+        <li><a href="./week9index.html">4월달력(9주)</a></li>
+        <li><a href="./tableweek5.html">5월달력(9주)</a></li>
+        <li><a href="./ex9_1(테이블경계선).html">테이블경계선(9주)</a></li>
+        <li><a href="./ex9_3(테이블배경).html">테이블배경(9주)</a></li>
+        <li><a href="./ex9_5(로그인폼).html">로그인폼(9주)</a></li>
+        <li><a href="./block_example.html">블록예제(7주)</a></li>
+        <li><a href="./book.html">책소개(7주)</a></li>
+        <li><a href="./week7index.html">음식점소개(7주)</a></li>
+        <li><a href="./week6index.html">식물들(6주)</a></li>
+        <li><a href="./week5index.html">크리스마스카드(5주)</a></li>
+        <li><a href="./week4index.html">식물원(4주)</a></li>
+        <li><a href="./arboretum.html">식물원 안내(4주)</a></li>
+        <li><a href="./festival.html">꽃축제(4주)</a></li>
+        <li><a href="./join.html">신청하기(4주)</a></li>
+        <li><a href="./week3index.html">프로필(3주)</a></li>
+        <li><a href="./recipe.html">레시피(3주)</a></li>
+    </ul>
+
+    <div id="login_box">
+        <h2>Member Login</h2>
+        <ul id="login_form_list">
+            <li id="id_pw_input">
+                <ul>
+                    <li>
+                        <span>ID</span>
+                        <input type="text">
+                    </li>
+                    <li id="password">
+                        <span>PW</span>
+                        <input type="password">
+                    </li>
+                </ul>
+            </li>
+
+            <li id="login_button">
+                <button>로그인</button>
+            </li>
+        </ul>
+
+        <ul id="etc_list">
+            <li>회원가입</li>
+            <li>아이디/비밀번호 찾기</li>
+        </ul>
+    </div>
+</body>
+</html>
