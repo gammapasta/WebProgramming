@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 갤러리</title>
+
+    <style>
+        /* 전체 리셋 및 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            
+            /* 패딩, 보더가 너비/높이에 포함되도록 */
+        }
+
+
+
+        /* 갤러리 컨테이너 */
+        #gallery {
+            float: left;
+            width: 100%;
+            height: 600px;
+            background-color: #252525;
+            padding-bottom: 20px;
+            
+
+        }
+
+
+        /* 메인 이미지 */
+        #galleryMainImage {
+            padding: 15px 24px 0 24px;
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+
+        /* 썸네일 영역 전체 */
+        #thumbnail {
+            padding: 30px 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        /* 왼쪽 화살표 버튼 */
+        #thumbnail #move_left {
+            margin: 0 5px 0 0;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+
+        }
+
+        /* 오른쪽 화살표 버튼 */
+        #thumbnail #move_right {
+            margin: 0 0 0 5px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+        }
+
+        /* 썸네일 목록 UL */
+        #thumbnail ul {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            gap: 10px;
+        }
+
+        #thumbnail ul ul {
+            list-style: none;
+        }
+
+        /* 썸네일 목록 */
+        #thumbnail ul li {
+            display: inline-block;
+            margin: 3px 10px 0 0;
+            vertical-align: top;
+            flex-shrink: 0;
+        }
+
+        /* 썸네일 이미지 */
+        #thumbnail ul img {
+            border: solid 1px #3d3d3d;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        #thumbnail ul a:hover img {
+            border: solid 5px #ffffff;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="gallery">
+
+        <img id="galleryMainImage" src="./img/item1.avif" alt="메인 이미지">
+        <div id="thumbnail">
+            <img src="./img/왼쪽화살표.png" id="move_left" alt="왼쪽 화살표">
+            <ul>
+                <li><img src="./img/item1.avif" alt="썸네일 1"></li>
+                <li><img src="./img/item2.avif" alt="썸네일 2"></li>
+                <li><img src="./img/item3.avif" alt="썸네일 3"></li>
+                <li><img src="./img/item4.avif" alt="썸네일 4"></li>
+                <li><img src="./img/item5.avif" alt="썸네일 5"></li>
+                <li><img src="./img/item1.avif" alt="썸네일 6"></li>
+                <li><img src="./img/item2.avif" alt="썸네일 7"></li>
+                <li><img src="./img/item3.avif" alt="썸네일 8"></li>
+            </ul>
+            <img src="./img/오른쪽화살표.png" id="move_right" alt="오른쪽 화살표">
+        </div>
+    </div>
+
+
+    <script>
+
+        const galleryMainImage = document.getElementById('galleryMainImage');
+        const thumbnailPhotos = document.querySelectorAll('#thumbnail ul img');
+        const moveLeftBtn = document.getElementById('move_left');
+        const moveRightBtn = document.getElementById('move_right');
+
+        const imageSrcList = [];
+
+        thumbnailPhotos.forEach(img => {
+            const src = img.getAttribute('src');
+            imageSrcList.push(src);
+        });
+
+
+        let currentIndex = 0;  // 현재 메인 이미지 인덱스
+
+
+        function scrollThumbnailIntoView(index) {
+            const targetThumbnail = thumbnailPhotos[index];
+            if (targetThumbnail) {
+                targetThumbnail.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
+        }
+
+        // 메인 이미지 및 썸네일 테두리 갱신 함수
+        function updateMainImage(index) {
+            currentIndex = index;
+            galleryMainImage.src = imageSrcList[index];
+
+            thumbnailPhotos.forEach((img, i) => {
+                img.style.border = (i === index) ? 'solid 2px #ffffff' : 'solid 1px #3d3d3d';
+            });
+            scrollThumbnailIntoView(index);
+        }
+
+        // 썸네일 클릭 이벤트
+        thumbnailPhotos.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                updateMainImage(index);
+            });
+        });
+
+        // 오른쪽 버튼 (다음)
+        moveRightBtn.addEventListener('click', () => {
+            const nextIndex = (currentIndex + 1) % imageSrcList.length;
+            updateMainImage(nextIndex);
+        });
+
+        // 왼쪽 버튼 (이전)
+        moveLeftBtn.addEventListener('click', () => {
+            const prevIndex = (currentIndex - 1 + imageSrcList.length) % imageSrcList.length;
+            updateMainImage(prevIndex);
+        });
+
+        // 페이지 로드 시 첫 번째 이미지에 적용
+        updateMainImage(0);
+
+    </script>
+
+</body>
+
+</html>

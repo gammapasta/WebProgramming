@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+        <link rel="stylesheet" href="./position_menu.css">
+    <style>
+
+    .ex10_7{
+        width: 200px;
+        height: 200px;
+
+    }
+
+    #main_title{
+        font-size: 20pt;
+        margin: 20px;
+        padding-bottom: 10px;
+        border-bottom: solid 2px #000000;
+    }
+    .line{
+        margin: 20px;
+        border-bottom: solid 1px #cccccc;
+    }
+
+    .list_item{
+        margin: 20px;
+        padding: 10px;
+    }
+    .image{
+        float: left;
+    }
+
+    .price li.red{
+        color: #ff0000;
+        font-weight: bold;
+
+    }
+    .price li.small{
+        font-size: 10   pt;
+        margin-top: 5px;
+        color: #888888;
+    }
+    .intro{
+        margin-left: 20px;
+        width: 300px;
+        float: left;
+    }
+    .price{
+        width: 200px;
+        float: left;
+    }
+    .company{
+        width: 150px;
+        float: left;
+    }
+    .hit{
+        width: 100px;
+        float: left;
+    }
+    #gallery_logo{
+        float: left;
+        font-size: 16pt;
+        color: #322b23;
+        padding: 10px 0 0 30px;
+    }
+    #gallery_top_menu{
+        float: right;
+        padding: 10px 10px 0 0;
+    }
+    #gallery_header{
+        width: 800px;
+        height: 40px;
+        background-color: #dddddd;
+    }
+    #gallery_left{
+        float: left;
+        width: 150px;
+        height: 600px;
+        float: left;
+        background-color: #343333;
+        color:#e2e2e2e2;
+
+    }
+    #gallery_left h2{
+        font-weight: normal;
+        padding: 20px 0 0 30px;
+    }
+    #gallery_left ul{
+        font-size: 14pt;
+        padding: 10px 10px 5px 25px;
+    }
+    #gallery_left li{
+        padding: 3px;
+    }
+    #gallery_right{
+        float: left;
+        width: 650px;
+        height: 600px;
+        background-color: #252525;
+    }
+    #gallery_main_title{
+        width: 572px;
+        padding: 10px;
+        border: solid 5px #444444;
+        margin: 24px 0 0 24px;
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    #gallery_main_image{
+        padding: 15px 0 0 24px;
+        width: 600px;
+        height: 350px;
+    }
+    #thumbnail{
+        padding: 30px 0 0 70px;
+
+    }
+    #thumbnail #move_left{
+        float: left;
+        margin: 20px 5px 0px 40px;
+    }
+
+    #thumbnail #move_right{
+        float: left;
+        margin: 20px 0px 0px 20px;
+    }
+    #thumbnail #photos{
+        float: left;
+        margin-left: 10px;
+    }
+    #thumbnail #photos li{
+        display: inline;
+        margin: 3px 0 0 0 ;
+    }
+    #thumbnail #photos img{
+        border: solid 5px #3d3d3d;
+        width: 50px;
+        height: 50px;
+    }
+    #thumbnail #photos a:hover img{
+        border: solid 5px #ffffff;
+    }
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="./index.html"><img src="./img/닌텐도게임로고.png"></a>
+        </div>
+
+        <ul id="top_menu">
+            <li>로그인 |</li>
+            <li>회원가입 |</li>
+            <li>마이페이지 |</li>
+            <li>배송조회 |</li>
+            <li>장바구니 |</li>
+            <li>이용안내 |</li>
+            <li>고객센터</li>
+        </ul>
+
+        <div class="clear"></div>
+
+        <ul id="main_menu">
+            <li><a href="./index.html">홈</a></li>
+            <li><a href="./관리자모드.html">관리자 모드</a></li>
+            <li><a href="./포토갤러리.html">포토 갤러리</a></li>
+            <li><a href="./ex10_8(position).html">position연습</a></li>
+        </ul>
+    </div>
+
+    <!-- 메인메뉴 끝 -->
+     
+    <div id="gallery_header">
+        <div id="gallery_logo">PHOTO GALLERY</div>
+        <div id="gallery_top_menu">로그인 | 회원가입 | 방명록</div>
+    </div>
+    <!-- 헤더 끝 -->
+    <div class="clear"></div>
+
+    <div id="gallery_left">
+        <h2>포토 갤러리</h2>
+        <ul>
+            <li class="gallery_submenu">+ 게임 사진</li>
+            <li class="gallery_submenu">+ 일상</li>
+            <li class="gallery_submenu">+ 인물</li>
+            <li class="gallery_submenu">+ 가족</li>
+        </ul>
+    </div>
+    <!-- 왼쪽 메뉴 끝 -->
+
+    <div id="gallery_right">
+        <div id="gallery_main_title">게임 사진</div>
+        <img id="gallery_main_image" src="./img/피크민.webp">
+        <div id="thumbnail">
+            <a href="./포토갤러리4.html"><img src="./img/왼쪽화살표.png" id="move_left"></a>
+            
+            <ul id="photos">
+                <li><a href="./포토갤러리.html"><img src="./img/동물의숲.jpg" ></a></li>
+                <li><a href="./포토갤러리2.html"><img src="./img/마리오카트.webp" ></a></li>
+                <li><a href="./포토갤러리3.html"><img src="./img/동키콩.webp" ></a></li>
+                <li><a href="./포토갤러리4.html"><img src="./img/스플래툰.webp" ></a></li>
+                <li><a href="./포토갤러리5.html"><img src="./img/피크민.webp" ></a></li>
+            </ul>
+            <img src="./img/오른쪽화살표.png" id="move_right">
+        </div>
+    </div>
+    <!-- 오른쪽 끝 -->
+    
+</body>
+</html>
